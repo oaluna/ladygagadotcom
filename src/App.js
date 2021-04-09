@@ -1,34 +1,42 @@
 //import ChromaticaIcon from "images/chromaticaicon.png"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
+import MusicPage from './pages/MusicPage/MusicPage';
 import StyledNavbar from './components/NavBar/NavBar';
+
+import Footer from './components/Footer/Footer';
 import './App.css';
+
+
 
 function App() {
   return (
     <Router>
       <div className='App'>
-        <StyledNavbar />
+      <StyledNavbar />
         <Switch>
           <Route exact path='/' component={HomePage}>
-            <HomePage />
+
           </Route>
-          <Route exact path='/music' component={HomePage}>
-            <p>LISTEN</p>
+          <Route exact path='/music' component={MusicPage}>
+
           </Route>
           <Route exact path='/tour' component={HomePage}>
-            <p> TOUR</p>
+
           </Route>
           <Route exact path='/vegas' component={HomePage}>
-            <p>VEGAS</p>
+
           </Route>
           <Route exact path='/signup' component={HomePage}>
-            <p>SIGN UP</p>
+
           </Route>
           <Route exact path='/hauslabs' component={HomePage}>
-            <p> HAUS LABORATORIES</p>
+
           </Route>
         </Switch>
+
+       <HomePage />
+      <Footer />
       </div>
     </Router>
   );

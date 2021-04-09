@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const HomePage = styled.div`
   display: flex;
@@ -9,31 +9,31 @@ const HomePage = styled.div`
   max-width: 100vw;
 `;
 
-const HomePageHeader = styled.h1`
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 100vh;
-  left: 0vw;
-`;
 
-const HomeLink = styled.a`
-top: 5vh;
-margin-left: 25px;
-  font-size: 72px;
-  text-align: center;
-`;
 const HomeImage = styled.span`
-  width: 100%;
   background-size: cover;
+  background-position: center;
 `;
 const HomeImageWide = styled.img`
   position: absolute;
-  transform: scale(100%, 100%);
-  left: -30vw;
-  top: -32vh;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-position: center;
+  transform: scale(1.8) !important;
+  background-attachment: fixed;
+  left: 10vw;
+  top: 5vh;
   z-index: -1;
+`;
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+b
+  100% {
+    opacity: 0.25;
+  }
 `;
 
 const HomeImageOverlay = styled.div`
@@ -45,27 +45,43 @@ const HomeImageOverlay = styled.div`
   transform: scale(1.5, 2.2);
   opacity: 0.25;
   mix-blend-mode: color-dodge;
+  animation: ${fadeIn} 3s ease-in;
+`;
+const HomePageHeader = styled.h1`
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 100vh;
+  left: 0vw;
+  z-index: 180;
 `;
 
+const HomeLink = styled.a`
+  top: 5vh;
+  margin-left: 0px;
+  font-size: 72px;
+  text-align: center;
+  z-index: 100;
+  &:hover {
+    text-shadow: 0px 0px 10px #f16e70;
+    color: #fff;
+    transition: 3s;
+  }
+`;
 const TrackList = styled.img`
-position: absolute;
-margin-top: -10vh;
-margin-left: -4vw;
-transform: scale(0.18);
-z-index: 0;
-`
+  position: absolute;
+  margin-top: 38vh;
+  margin-left: 32vw;
+  transform: scale(0.35);
+  z-index: 0;
+  mix-blend-mode: lighten;
+`;
 
 const Home = () => (
   <HomePage>
-    <HomePageHeader>
-      ENTER{' '}
-      <HomeLink
-        href='https://ladygaga.com'
-        target='_blank'
-        rel='noopener noreferrer'>
-        LADYGAGA.COM
-      </HomeLink>
-    </HomePageHeader>
+
     <HomeImage>
       <HomeImageWide
         src='https://cache.umusic.com/_sites/_halo/artistlg/images/LG-Wide.jpg'
@@ -80,9 +96,19 @@ const Home = () => (
         alt='Chromatica - out now!'
       />
     </HomeImageOverlay>
-
-      <TrackList src="https://cache.umusic.com/_sites/_halo/artistlg/images/TRACKLIST.png" alt="Chromatica tracklist" />
-
+    <HomePageHeader>
+      ENTER{' '}
+      <HomeLink
+        href='https://ladygaga.com'
+        target='_blank'
+        rel='noopener noreferrer'>
+        LADYGAGA.COM
+      </HomeLink>
+    </HomePageHeader>
+    <TrackList
+      src='https://cache.umusic.com/_sites/_halo/artistlg/images/TRACKLIST.png'
+      alt='Chromatica tracklist'
+    />
   </HomePage>
 );
 
