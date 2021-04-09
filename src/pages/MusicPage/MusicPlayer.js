@@ -1,7 +1,8 @@
 import { Component } from 'react';
 import * as $ from 'jquery';
 
-const authEndpoint = 'https://accounts.spotify.com/authorize';
+const authEndpoint =
+  'https://api.spotify.com/v1/playlists/37i9dQZF1DXaB4n0u69YR3';
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = 'f24466db19cf4bee96076db82a922ba8';
 const redirectUri = 'http://localhost:3000';
@@ -25,7 +26,10 @@ window.location.hash = '';
 
 const Player = (props) => {
   const backgroundStyles = {
-    backgroundImage: `url(${props.item.album.images[0].url})`
+    backgroundImage: `url(${props.item.album.images[0].url})`,
+    position: 'relative',
+    margin: '20px auto',
+    padding: 0
   };
 
   const progressBarStyles = {
@@ -33,25 +37,24 @@ const Player = (props) => {
   };
 
   return (
-    <div
-      className='Player'
-      style={{
-position: 'static',
-        zIndex: 400,
-        marginTop: '25vh',
-        marginLeft: '35vw',
-        padding: '45px auto',
-        maxWidth: '35vw',
-        width: '100%'
-      }}>
-      <div className='main-wrapper'>
+    <div className='main-player' style={{ maxWidth: '40vw' }}>
+      <div className='wrapper'>
         <div className='now-playing__img'>
-          <img src={props.item.album.images[0].url} alt='album artwork' />
+          <img
+            src={props.item.album.images[0].url}
+            alt='album artwork'
+            className='album-artwork'
+          />
         </div>
         <div className='now-playing__side'>
-          <div className='now-playing__name'>{props.item.name}</div>
-          <div className='now-playing__artist'>
-            {props.item.artists[0].name}
+          <h2 className='title'>{props.item.name}</h2>
+          <h3 className='title artist'>{props.item.artists[0].name}</h3>
+          <div class='buttons'>
+            <div class='player-buttons shuffle'></div>
+            <div class='player-buttons previously'></div>
+            <div class='player-buttons play'></div>
+            <div class='player-buttons next'></div>
+            <div class='player-buttons repeat'></div>
           </div>
           <div className='now-playing__status'>
             {props.is_playing ? 'Playing' : 'Paused'}
@@ -71,7 +74,7 @@ class MusicPlayer extends Component {
     super();
     this.state = {
       token:
-        'BQAyhOirZF1yl4526zIEBToY_gAlzu72g1TsPo6OjrQSbuDO_QRS4rmbbks1h52_fzo0yERH0zn76fJ-RaJ2qi8eUkWR_s921izdgDdnWtpTjpaflYTfHNvvQ2NSMc8d5i1X_aKgucOpD5D8w4CNtAB5IdA5J78XIYT4',
+        'BQA1h4rV7kj1QjSWmH4KEywEwtCprtXLCJo3qQt_13goJVpowsOZg_7nPNynhfiIZokC3VYJIkSHFwDJjt6E4OICw7CEL8-EVgjxQ66PHzzBTzAebqrtgwL9-wWjKMQKYgm4zo-Sc4dio6yV42NNcdKs_l7f42FGcGwe_CF3cESwj9Ble33Mih5KElADZzDR_8jfRGJP9g38',
       item: {
         album: {
           images: [
@@ -151,25 +154,7 @@ class MusicPlayer extends Component {
 
   render() {
     return (
-      <div
-        className='MusicPlayer'
-        style={{
-          zIndex: 400,
-          marginTop: '20vh',
-          background: 'rgba(241, 110, 112, 0.8)',
-          maxWidth: '80vw',
-          backdropFilter: 'normal',
-          opacity: 1,
-          mixBlendMode: 'normal',
-          width: '100%',
-          minHeight: '60vh',
-          height: '100%',
-          padding: '45px auto',
-          borderRadius: '50px',
-          justifyContent: 'center',
-          boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )',
-          backdropFilter: 'blur( 4px )'
-        }}>
+      <div className='MusicPlayer'>
         {!this.state.token && (
           <button style={{ position: 'absolute', top: '50vh', zIndex: 300 }}>
             <a

@@ -9,7 +9,6 @@ const HomePage = styled.div`
   max-width: 100vw;
 `;
 
-
 const HomeImage = styled.span`
   background-size: cover;
   background-position: center;
@@ -72,30 +71,21 @@ const HomeLink = styled.a`
 `;
 const TrackList = styled.img`
   position: absolute;
-  margin-top: 38vh;
-  margin-left: 32vw;
-  transform: scale(0.35);
+  top: 48vh;
+ left: 30vw;
+  transform: scale(0.3);
   z-index: 0;
   mix-blend-mode: lighten;
 `;
 
 const Home = () => (
-  <HomePage>
-
+<div className="HomePage">
     <HomeImage>
       <HomeImageWide
         src='https://cache.umusic.com/_sites/_halo/artistlg/images/LG-Wide.jpg'
         alt='The album artist in a far away planet'
       />
     </HomeImage>
-
-    <HomeImageOverlay>
-      <img
-        className='out-now'
-        src='https://cache.umusic.com/_sites/_halo/artistlg/images/outnow.png'
-        alt='Chromatica - out now!'
-      />
-    </HomeImageOverlay>
     <HomePageHeader>
       ENTER{' '}
       <HomeLink
@@ -105,11 +95,19 @@ const Home = () => (
         LADYGAGA.COM
       </HomeLink>
     </HomePageHeader>
+    <HomeImageOverlay>
+      <img
+        className='out-now'
+        src='https://cache.umusic.com/_sites/_halo/artistlg/images/outnow.png'
+        alt='Chromatica - out now!'
+      />
+    </HomeImageOverlay>
+
     <TrackList
       src='https://cache.umusic.com/_sites/_halo/artistlg/images/TRACKLIST.png'
       alt='Chromatica tracklist'
     />
-  </HomePage>
+    </div>
 );
 
 export default Home;

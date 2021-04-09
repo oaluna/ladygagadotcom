@@ -4,13 +4,17 @@
 .wrapper {
   position: relative;
   margin-top: 0vh;
-  margin-left: auto;
+  margin-left: 10vw;
   margin-right: auto;
-  display: grid;
-  grid-template-rows: 7.5rem 31rem 8rem 3rem 15.2rem 2rem;
-  width: 37.5rem;
+  display: flex;
+  flex-direction: column;
+flex-wrap: nowrap;
+align-items: center;
+justify-content: center;
+  max-width: 100vw;
+  width: 100%;
   height: 66.7rem;
-  background: rgba(241, 110, 112, 0.8);
+  background: #ffa1bb;
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 4px );
 -webkit-backdrop-filter: blur( 4px );
@@ -35,9 +39,9 @@ border-radius: 10px;
 .main-player {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
+
   scroll-snap-type: x proximity;
 }
 
@@ -45,54 +49,49 @@ border-radius: 10px;
   display: none;
 }
 
-.card {
-  min-width: 24.9rem;
-  height: 24.9rem;
-  margin: 0 3.4rem 0 0;
-  border-radius: 25px;
-  scroll-snap-align: center;
-  padding: 0.9rem;
-  box-shadow: 7px -7px 12px 2px #CAB4AC,
-              -7px 7px 12px 2px #FFEEE4;
-}
-
-.card img {
+.now-playing__img .album-artwork{
+display: flex;
+flex-direction: row;
+position: relative;
   width: 100%;
-  border-radius: 2.5rem;
+  max-width: 20vw;
+
 }
 
 .title {
   justify-self: center;
   text-align: center;
   color: white;
+  width: 100%;
 }
 
+
+
 .title h2 {
-  margin-top: 1rem;
+
   font-weight: 500;
-  font-size: 2.2rem;
+  font-size: 3rem;
   line-height: 1;
   color: white;
 }
 
 .title h3 {
 
-  margin-top: -8vh;
-  font-weight: 500;
+
+  font-weight: 100;
   font-size: 1.4rem;
   color: white;
 }
 
-.progress-bar {
-  display: grid;
-  grid-template-columns: repeat(2, 18.75px) 1fr repeat(2, 18.75px);
-  grid-template-rows: 10px 1fr;
+.progress__bar {
+width: 100vw;
+
   align-items: flex-start;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 5vh;
 }
 
-.progress-bar .bar {
+.progress__bar .bar {
   grid-column: 3;
   position: relative;
   width: 300px;
@@ -102,7 +101,7 @@ border-radius: 10px;
   border-radius: 20px;
 }
 
-.progress-bar .bar .dot {
+.progress__bar .bar .dot {
   position: absolute;
   left: 120px;
   top: -2px;
@@ -113,13 +112,13 @@ border-radius: 10px;
   border-radius: 50%;
 }
 
-.progress-bar .start {
+.progress__bar .start {
   grid-column: 2;
   grid-row: 2;
   font-size: 12px;
   font-weight: 500;
 }
-.progress-bar .end {
+.progress__bar .end {
   position: relative;
   left: -4px;
   justify-self: center;
@@ -131,26 +130,29 @@ border-radius: 10px;
 
 .buttons {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100vw;
+  margin-left: -9vw;
 }
 .player-buttons {
-  width: 40px;
-  height: 40px;
-  box-shadow: 4px -4px 8px 2px #CAB4AC,
-              -4px 4px 8px 2px #FFEEE4;
-  border-radius: 50px;
+  width: 75px;
+  height: 75px;
+  box-shadow: 20px 20px 60px #d9899f,
+  -20px -20px 60px #ffb9d7;
+  border-radius: 70px;
+  background: linear-gradient(145deg, #ffacc8, #e691a8);
 }
 .play {
   margin: 0 1.6rem;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   background-image: url('https://i.imgur.com/74BYgmM.png');
   background-repeat: no-repeat;
   background-size: 35px;
   background-position: center;
 }
 .shuffle {
+  width: 80px;
+  height: 80px;
   margin-right: 1.6rem;
   background-image: url('https://i.imgur.com/j2bi5V7.png');
   background-repeat: no-repeat;
@@ -211,7 +213,8 @@ border-radius: 10px;
 }
 
 .now-playing__status {
-  margin-bottom: 1em;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 
 .now-playing__img {
