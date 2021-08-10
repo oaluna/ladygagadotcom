@@ -1,11 +1,14 @@
 import { Component } from "react";
 import * as $ from "jquery";
-require("dotenv")
+require("dotenv");
 
-const authEndpoint = process.env.ENDPOINT;
+const authEndpoint =
+  process.env.ENDPOINT ||
+  "https://api.spotify.com/v1/playlists/37i9dQZF1DXaB4n0u69YR3";
 // Replace with your app's client ID, redirect URI and desired scopes
-const clientId = process.env.SPOTIFY_CLIENT_ID;
-const redirectUri = process.env.REDIRECT_URI;
+const clientId =
+  process.env.SPOTIFY_CLIENT_ID || "f24466db19cf4bee96076db82a922ba8";
+const redirectUri = process.env.REDIRECT_URI || "http://localhost:3000";
 export const scopes = [
   "user-top-read",
   "user-read-currently-playing",
@@ -49,12 +52,12 @@ const Player = (props) => {
         <div className="now-playing__side">
           <h2 className="title">{props.item.name}</h2>
           <h3 className="title artist">{props.item.artists[0].name}</h3>
-          <div class="buttons">
-            <div class="player-buttons shuffle"></div>
-            <div class="player-buttons previously"></div>
-            <div class="player-buttons play"></div>
-            <div class="player-buttons next"></div>
-            <div class="player-buttons repeat"></div>
+          <div className="buttons">
+            <div className="player-buttons shuffle"></div>
+            <div className="player-buttons previously"></div>
+            <div className="player-buttons play"></div>
+            <div className="player-buttons next"></div>
+            <div className="player-buttons repeat"></div>
           </div>
           <div className="now-playing__status">
             {props.is_playing ? "Playing" : "Paused"}
@@ -74,7 +77,8 @@ class MusicPlayer extends Component {
     super();
     this.state = {
       token:
-        process.env.TOKEN,
+        process.env.TOKEN ||
+        "BQAJAY_bM5iewaKMotPR5ZN6lwgUyYSab_fKCx-gB4m4nEyBPpqxMWyr6iKavFpxmP8PNmhJpVoibkeuehQ2rRP7aB82oiz3nDZzQqV1peZRupM-wb9L9nAJv7hVwXX5LnwarfxATdUG0emq0BWRmJSOo4sqkfP02vhy",
       item: {
         album: {
           images: [

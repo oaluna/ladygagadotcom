@@ -20,7 +20,6 @@ function App() {
           <Route exact path="/signup" component={HomePage}></Route>
           <Route exact path="/hauslabs" component={HomePage}></Route>
         </Switch>
-
         <HomePage />
         <Footer />
       </div>

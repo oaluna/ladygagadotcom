@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import Fade from "react-reveal";
 
 const HomePage = styled.div`
   display: flex;
@@ -86,6 +87,7 @@ const Home = () => (
         alt="The album artist in a far away planet"
       />
     </HomeImage>
+    <Fade right delay="100" >
     <HomePageHeader>
       ENTER{" "}
       <HomeLink
@@ -96,6 +98,7 @@ const Home = () => (
         LADYGAGA.COM
       </HomeLink>
     </HomePageHeader>
+    </Fade>
     <HomeImageOverlay>
       <img
         className="out-now"
@@ -104,10 +107,11 @@ const Home = () => (
       />
     </HomeImageOverlay>
 
-    <TrackList
+    <Fade left delay="100" >
+      <TrackList
       src="https://cache.umusic.com/_sites/_halo/artistlg/images/TRACKLIST.png"
-      alt="Chromatica tracklist"
-    />
+      alt="Chromatica tracklist"/>
+    </Fade>
   </div>
 );
 
