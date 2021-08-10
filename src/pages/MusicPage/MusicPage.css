@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+
+.wrapper {
+  position: relative;
+  margin-top: 0vh;
+  margin-left: 10vw;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 100vw;
+  width: 100%;
+  height: 66.7rem;
+  background: #ffa1bb;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  z-index: 200;
+  transform: scale(0.7);
+}
+
+.header {
+  align-self: flex-end;
+  justify-self: center;
+  color: white;
+}
+
+.header h3 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: white;
+  margin: 0 0 1.9rem 0;
+}
+
+.main-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  scroll-snap-type: x proximity;
+}
+
+.main-player::-webkit-scrollbar {
+  display: none;
+}
+
+.now-playing__img .album-artwork {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  max-width: 20vw;
+
+}
+
+.title {
+  justify-self: center;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+
+
+.title h2 {
+
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 1;
+  color: white;
+}
+
+.title h3 {
+
+
+  font-weight: 100;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.progress__bar {
+  width: 100vw;
+
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+.progress__bar .bar {
+  grid-column: 3;
+  position: relative;
+  width: 300px;
+  height: 5px;
+  clip-path: polygon()(82% 10% 16% 10%);
+  background: linear-gradient(to right, #FFA1BB, #FFDDE6);
+  border-radius: 20px;
+}
+
+.progress__bar .bar .dot {
+  position: absolute;
+  left: 120px;
+  top: -2px;
+  width: 9px;
+  height: 9px;
+  background-color: #FFA1BB;
+  clip-path: circle(100%);
+  border-radius: 50%;
+}
+
+.progress__bar .start {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.progress__bar .end {
+  position: relative;
+  left: -4px;
+  justify-self: center;
+  grid-column: 4;
+  grid-row: 2;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  width: 100vw;
+  margin-left: -9vw;
+}
+
+.player-buttons {
+  width: 75px;
+  height: 75px;
+  box-shadow: 20px 20px 60px #d9899f,
+    -20px -20px 60px #ffb9d7;
+  border-radius: 70px;
+  background: linear-gradient(145deg, #ffacc8, #e691a8);
+}
+
+.play {
+  margin: 0 1.6rem;
+  width: 80px;
+  height: 80px;
+  background-image: url('https://i.imgur.com/74BYgmM.png');
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: center;
+}
+
+.shuffle {
+  width: 80px;
+  height: 80px;
+  margin-right: 1.6rem;
+  background-image: url('https://i.imgur.com/j2bi5V7.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+
+.previously {
+  background-image: url('https://i.imgur.com/sAEHTha.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+
+.next {
+  background-image: url('https://i.imgur.com/sMMyOFc.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+
+.repeat {
+  margin-left: 1.6rem;
+  background-image: url('https://i.imgur.com/RqwfMPg.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar {
+  width: 142px;
+  height: 5px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.shuffle:hover,
+.previously:hover,
+.next:hover,
+.repeat:hover {
+  box-shadow: inset 4px 4px 8px #c8b2aa,
+    inset -4px -4px 8px #fff0e6;
+}
+
+.play:hover {
+  box-shadow: inset 4px 4px 8px #c8b2aa,
+    inset -4px -4px 8px #fff0e6;
+}
+
+/** Now Playing **/
+
+.now-playing__name {
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+}
+
+.now-playing__artist {
+  margin-bottom: 1em;
+}
+
+.now-playing__status {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.now-playing__img {
+  float: left;
+  margin-right: 10px;
+  text-align: right;
+  width: 45%;
+}
+
+.now-playing__img img {
+  max-width: 80vmin;
+  width: 100%;
+}
+
+.now-playing__side {
+  margin-left: 5%;
+  width: 45%;
+}
+
+/** Progress **/
+
+.progress {
+  border: 1px solid #eee;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress__bar {
+  background-color: #eee;
+  height: 4px;
+}
