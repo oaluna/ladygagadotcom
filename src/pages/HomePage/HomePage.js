@@ -80,14 +80,14 @@ const TrackList = styled.img`
 `;
 
 const Home = () => (
-  <div className="HomePage">
+  <HomePage>
     <HomeImage>
       <HomeImageWide
         src="https://cache.umusic.com/_sites/_halo/artistlg/images/LG-Wide.jpg"
         alt="The album artist in a far away planet"
       />
     </HomeImage>
-    <Fade right delay="100" >
+    <Fade left delay={100} duration={500} >
     <HomePageHeader>
       ENTER{" "}
       <HomeLink
@@ -107,12 +107,12 @@ const Home = () => (
       />
     </HomeImageOverlay>
 
-    <Fade left delay="100" >
+    <Fade right delay="100" >
       <TrackList
       src="https://cache.umusic.com/_sites/_halo/artistlg/images/TRACKLIST.png"
       alt="Chromatica tracklist"/>
     </Fade>
-  </div>
+  </HomePage>
 );
 
 export default Home;

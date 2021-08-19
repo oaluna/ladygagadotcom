@@ -5,7 +5,7 @@ const Footer = () => (
     className="l-footer"
     role="contentinfo"
     style={{
-      marginTop: "73%",
+      marginTop: "74%",
       maxWidth: "90vw",
       height: "auto",
       width: "100%",
