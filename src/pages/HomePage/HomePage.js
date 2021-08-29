@@ -8,12 +8,31 @@ const HomePage = styled.div`
   margin: 0;
   padding: 0;
   max-width: 100vw;
+  background: #000;
 `;
 
 const HomeImage = styled.span`
   background-size: cover;
   background-position: center;
 `;
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  b
+  100% {
+    opacity: 0.25;
+  }
+  `;
+const fadeInHomeLink = keyframes`
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}`
+
 const HomeImageWide = styled.img`
   position: absolute;
   max-width: 100vw;
@@ -24,38 +43,31 @@ const HomeImageWide = styled.img`
   left: 10vw;
   top: 5vh;
   z-index: -1;
+  animation: ${fadeIn} 3s ease-in;
+  
 `;
-
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-b
-  100% {
-    opacity: 0.25;
-  }
-`;
-
 const HomeImageOverlay = styled.div`
   position: absolute;
   left: 0vw;
   top: 35vh;
   width: 100%;
   height: auto;
-  transform: scale(1.5, 2.2);
+  transform: scale(1.75, 2.5);
   opacity: 0.25;
   mix-blend-mode: color-dodge;
-  animation: ${fadeIn} 3s ease-in;
-`;
+  animation: ${fadeIn} 5s ease-in;
+  `;
 const HomePageHeader = styled.h1`
   width: 30vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   position: absolute;
-  top: 100vh;
+  top: 75vh;
   left: 0vw;
   z-index: 180;
+  animation: ${fadeInHomeLink} 7s ease-in;
+  
 `;
 
 const HomeLink = styled.a`
@@ -87,7 +99,7 @@ const Home = () => (
         alt="The album artist in a far away planet"
       />
     </HomeImage>
-    <Fade left delay={100} duration={500} >
+
     <HomePageHeader>
       ENTER{" "}
       <HomeLink
@@ -98,7 +110,7 @@ const Home = () => (
         LADYGAGA.COM
       </HomeLink>
     </HomePageHeader>
-    </Fade>
+
     <HomeImageOverlay>
       <img
         className="out-now"
@@ -107,10 +119,11 @@ const Home = () => (
       />
     </HomeImageOverlay>
 
-    <Fade right delay="100" >
+    <Fade right delay="100">
       <TrackList
-      src="https://cache.umusic.com/_sites/_halo/artistlg/images/TRACKLIST.png"
-      alt="Chromatica tracklist"/>
+        src="https://cache.umusic.com/_sites/_halo/artistlg/images/TRACKLIST.png"
+        alt="Chromatica tracklist"
+      />
     </Fade>
   </HomePage>
 );
