@@ -2,6 +2,7 @@
   font-style: italic
 }
 
+
 .noscroll,svg:not(:root) {
   overflow: hidden
 }
@@ -4849,11 +4850,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #333;
-<<<<<<< HEAD
   background: #000;
-=======
-  background: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
@@ -5355,11 +5352,7 @@ legend {
 }
 
 .fieldset legend {
-<<<<<<< HEAD
   background: #000;
-=======
-  background: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   padding: 0 .1875rem;
   margin: 0 0 0 -.1875rem
 }
@@ -6020,11 +6013,7 @@ select[multiple] {
 }
 
 .dropdown-pane {
-<<<<<<< HEAD
   background-color: #000;
-=======
-  background-color: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   border: 1px solid #cacaca;
   border-radius: 0;
   display: block;
@@ -7239,11 +7228,7 @@ article,aside,audio,canvas,details,figcaption,figure,footer,header,hgroup,main,n
 }
 
 .bolero-access-background {
-<<<<<<< HEAD
   background-color: #000;
-=======
-  background-color: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   position: fixed;
   z-index: 0;
   top: 0;
@@ -8729,11 +8714,7 @@ form .container-inline-date>.form-type-date-select .form-item {
 #mailing-list .form-actions {
   margin: 25px auto 0;
   position: relative;
-<<<<<<< HEAD
   color: #000;
-=======
-  color: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   border: 2px solid #f16e70;
   background: #f16e70;
   display: -webkit-box;
@@ -10369,11 +10350,7 @@ form[className*=user-] .ae_social_login_services>li>a.deezer:after {
 }
 
 .l-footer .site-name a {
-<<<<<<< HEAD
   background-image: url("../../images/chromaticaicon.png");
-=======
-  background-image: url()
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
 }
 
 .site-logo {
@@ -10839,11 +10816,7 @@ ul.left,ul.left li,ul.right,ul.right li {
 }
 
 .inverted a.menu-icon>span {
-<<<<<<< HEAD
   background: #000
-=======
-  background: #10784f
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
 }
 
 a.menu-icon>span:nth-child(1) {
@@ -10947,11 +10920,7 @@ ul.right {
 .l-region--navigation a {
   font-size: 14px;
   text-transform: uppercase;
-<<<<<<< HEAD
   color: #000;
-=======
-  color: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   font-weight: 700;
   cursor: pointer;
   -webkit-transition: .2s color ease-in-out;
@@ -13060,11 +13029,7 @@ div.ui360 a span.metadata,div.ui360 a span.metadata * {
 .ds-bolero-user-account .ds-region--footer>.user-stats>li .highlighted .count,.ds-bolero-user-account .ds-region--metadata .highlighted .h4,.ds-bolero-user-account .ds-region--metadata .highlighted h4,.ds-bolero-user-account .highlighted .displayname,.highlight,.highlighted .ds-bolero-user-account .displayname,.highlighted .ds-bolero-user-account .ds-region--footer>.user-stats>li .count,.highlighted .ds-bolero-user-account .ds-region--metadata .h4,.highlighted .ds-bolero-user-account .ds-region--metadata h4,.highlighted .h1,.highlighted .h2,.highlighted .h3,.highlighted .h4,.highlighted .h5,.highlighted .h6,.highlighted h1,.highlighted h2,.highlighted h3,.highlighted h4,.highlighted h5,.highlighted h6 {
   display: inline;
   font-weight: 700;
-<<<<<<< HEAD
   background: #000;
-=======
-  background: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   color: #000;
   padding: 0 10px;
   margin-bottom: 0;
@@ -13341,11 +13306,7 @@ div.ui360 a span.metadata,div.ui360 a span.metadata * {
 }
 
 .not-front .l-main .inner-wrap .l-region--sidebar-first .node--news.ds-bolero-feed,.not-front .l-main .inner-wrap .l-region--sidebar-first .node--video.ds-bolero-newsfeed {
-<<<<<<< HEAD
   background: #000
-=======
-  background: #10784f
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
 }
 
 .page-user .l-columns.inner-wrap>[className*="-sidebar-"]>div:not(:first-child) {
@@ -14442,11 +14403,7 @@ div.ui360 a span.metadata,div.ui360 a span.metadata * {
 }
 
 .ds-bolero-card {
-<<<<<<< HEAD
   background: #000;
-=======
-  background: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   overflow: hidden;
   display: inline-block;
   -webkit-transition: .2s all ease-in-out;
@@ -14781,11 +14738,7 @@ div.ui360 a span.metadata,div.ui360 a span.metadata * {
   position: absolute;
   top: 0;
   right: 0;
-<<<<<<< HEAD
   background: #000
-=======
-  background: #10784f
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
 }
 
 .ds-bolero-grid:not(.node--hero):not(.node--headline):not(.node--artist--featured).node--release .ds-region--foreground,.ds-bolero-grid:not(.node--hero):not(.node--headline):not(.node--artist--featured).node--video .ds-region--foreground {
@@ -15060,11 +15013,7 @@ div.ui360 a span.metadata,div.ui360 a span.metadata * {
 
 .ds-bolero-newsfeed {
   margin: .5rem auto;
-<<<<<<< HEAD
   background: #000;
-=======
-  background: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   max-width: 80rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15335,11 +15284,7 @@ div.ui360 a span.metadata,div.ui360 a span.metadata * {
 }
 
 .l-page:after,body {
-<<<<<<< HEAD
   background-color: #000
-=======
-  background-color: #10784f
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
 }
 
 .ds-bolero-user-account .ds-region--footer>.user-stats {
@@ -15590,11 +15535,7 @@ body.page-node-2 .node--page--full {
 
 .node.node--event .field--name-asf-events-notify .onSaleDate,.node.node--event .field--name-asf-events-notify a,.node.node--event .field--name-node-link .onSaleDate,.node.node--event .field--name-node-link a,.node.node--event .field[className*="-rsvp"] .onSaleDate,.node.node--event .field[className*="-rsvp"] a,.node.node--event .field[className*="-tickets"] .onSaleDate,.node.node--event .field[className*="-tickets"] a,.node.node--event .field[className*="-vip"] .onSaleDate,.node.node--event .field[className*="-vip"] a {
   position: relative;
-<<<<<<< HEAD
   color: #000;
-=======
-  color: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   border: 2px solid #f16e70;
   background: #f16e70;
   display: -webkit-box;
@@ -15790,11 +15731,7 @@ body.page-node-2 .node--page--full {
 
 .block--asf-events-bit-artist-link .block__content a,.block--asf-events-bit-artist-track .block__content a {
   position: relative;
-<<<<<<< HEAD
   color: #000;
-=======
-  color: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   border: 2px solid #f16e70;
   padding: 4px;
   background: #f16e70;
@@ -15959,11 +15896,7 @@ body.page-node-2 .node--page--full {
 
 .front nav#block-menu-block-asf-common-mm-nav .menu li a {
   position: relative;
-<<<<<<< HEAD
   color: #000;
-=======
-  color: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   border: 2px solid #f16e70;
   padding: 4px;
   background: #f16e70;
@@ -16957,11 +16890,7 @@ input:checked~.user-profile-form section[className*=user-profile-] .form-item[cl
 }
 
 .page-videos .l-banner .node--hero {
-<<<<<<< HEAD
   background: #000
-=======
-  background: #10784f
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
 }
 
 .page-videos .l-banner .node--hero .ds-region--background {
@@ -16976,17 +16905,10 @@ input:checked~.user-profile-form section[className*=user-profile-] .form-item[cl
 
 .page-videos .l-banner .node--hero .ds-region--background:after {
   content: '';
-<<<<<<< HEAD
   background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(16,120,79,0)),to(#000));
   background-image: -webkit-linear-gradient(top,rgba(16,120,79,0),#000);
   background-image: -o-linear-gradient(top,rgba(16,120,79,0),#000);
   background-image: linear-gradient(to bottom,rgba(16,120,79,0),#000);
-=======
-  background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(16,120,79,0)),to(#10784f));
-  background-image: -webkit-linear-gradient(top,rgba(16,120,79,0),#10784f);
-  background-image: -o-linear-gradient(top,rgba(16,120,79,0),#10784f);
-  background-image: linear-gradient(to bottom,rgba(16,120,79,0),#10784f);
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   width: 100%;
   height: 100%;
   position: absolute;
@@ -19653,11 +19575,7 @@ input:checked~.user-profile-form section[className*=user-profile-] .form-item[cl
   }
 
   .node.ds-bolero-article {
-<<<<<<< HEAD
       background: #000;
-=======
-      background: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
       padding-bottom: 2.25rem
   }
 
@@ -19704,11 +19622,7 @@ input:checked~.user-profile-form section[className*=user-profile-] .form-item[cl
   .front .l-footer>nav {
       position: fixed;
       bottom: 0;
-<<<<<<< HEAD
       background: #000
-=======
-      background: #10784f
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   }
 
   .node--release.split-tracks .field--name-field-tracks>.field__items {

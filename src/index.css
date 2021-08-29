@@ -5,11 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-<<<<<<< HEAD
-
-=======
-  background-color: #10784f;
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
   color: #f16e70;
   overflow-x: hidden;
 }
@@ -18,8 +13,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 49eb565b5e4bcc40d5f562bdce8f158c87b46ecc
