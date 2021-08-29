@@ -1,13 +1,11 @@
 {
   "name": "ladygagadotcom",
   "version": "0.1.0",
-  "private": false,
-  "author": "Oscar Armando Luna <https://oscarluna.dev>",
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "dotenv": "^10.0.0",
     "jquery": "^3.6.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -15,11 +13,8 @@
     "react-reveal": "^1.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "react-spotify-web-playback": "^0.8.2",
-    "redux": "^4.0.5",
     "spotify-web-api-node": "^5.0.2",
     "styled-components": "^5.2.1",
-    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
