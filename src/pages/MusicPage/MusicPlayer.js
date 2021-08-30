@@ -16,6 +16,7 @@ const MusicPlayer = () => {
           marginTop: "15vh",
           marginLeft: "5vw",
           marginRight: "auto",
+          position: "absolute"
         }}
       ></iframe>
     </div>

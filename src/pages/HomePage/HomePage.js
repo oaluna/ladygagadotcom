@@ -1,177 +1,169 @@
-///import { useState, useEffect, useRef } from "react";
-///import { config, useSpring } from "react-spring";
-///import HomeAnimation from "../../components/HomeAnimation/HomeAnimation"
-import Fade from "react-reveal";
-import styled from "styled-components";
+import React from "react";
 
-//import HomeIntroImg from "../../images/LGTextGraphic.jpg";
+import Layout from "../../components/Layout/Layout";
+import { motion } from "framer-motion";
+import LGWide from "../../images/LG-Wide.jpg";
+import LGTextGraphic from "../../images/LGTextGraphic.jpg";
 
- const HomePage = styled.div`
-   display: flex;
-   flex-direction: column;
-   font-size: 36px;
-   margin: 0;
-   padding: 0;
+const content = (isFirstMount) => ({
+  animate: {
+    transition: { staggerChildren: 1.5, delayChildren: isFirstMount ? 2.8 : 0 },
+  },
+});
 
-   max-width: 100vw;
-   background: #000;
- `;
-
-// const HomeIntroSeq = styled.span`
-//   background-size: cover;
-//   background-position: center;
-// `;
-
-// const HomeImage = styled.span`
-//   background-size: cover;
-//   background-position: center;
-// `;
-
-
-
-
-// const fadeIn = keyframes`
-//   0% {
-//     opacity: 0;
-//   }
-//   b
-//   100% {
-//     opacity: 0.25;
-//   }
-//   `;
-// const fadeInHomeLink = keyframes`
-// 0% {
-//   opacity: 0;
-// }
-// 100% {
-//   opacity: 1;
-// }`;
-// const fadeIntro = keyframes`
-//   0% {
-//     opacity: 0;
-
-//   }
-//   50% {
-//     opacity: 1;
-//   }
-//   100% {
-//     opacity: 0;
-//   }
-// `;
-// const HomeIntroImage = styled.img`
-//   position: absolute;
-//   max-width: 100vw;
-//   min-height: 100vh;
-//   background-position: center;
-//   transform: scale(1.8) !important;
-//   background-attachment: fixed;
-//   left: 10vw;
-//   top: 5vh;
-//   z-index: -1;
-//   animation: ${fadeIntro} 5s ease-in-out;
-// `;
-
-// const HomeImageWide = styled.img`
-//   position: absolute;
-//   max-width: 100vw;
-//   min-height: 100vh;
-//   background-position: center;
-//   transform: scale(1.8) !important;
-//   background-attachment: fixed;
-//   left: 10vw;
-//   top: 5vh;
-//   z-index: -1;
-//   animation: ${fadeIn} 3s ease-in;
-// `;
-// const HomeImageOverlay = styled.div`
-//   position: absolute;
-//   left: 0vw;
-//   top: 35vh;
-//   width: 100%;
-//   height: auto;
-//   transform: scale(1.75, 2.5);
-//   opacity: 0.25;
-//   mix-blend-mode: color-dodge;
-//   animation: ${fadeIn} 5s ease-in;
-// `;
- const HomePageHeader = styled.h1`
-   width: 30vw;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   position: absolute;
-   top: 75vh;
-   left: 0vw;
-   z-index: 180;
- `;
-
-const HomeLink = styled.a`
-  top: 5vh;
-  margin-left: 0px;
-  font-size: 72px;
-  text-align: center;
-  z-index: 100;
-  &:hover {
-    text-shadow: 0px 0px 10px #f16e70;
-    color: #fff;
-    transition: 3s;
-  }
-`;
-const TrackList = styled.img`
-  position: absolute;
-  top: 48vh;
-  left: 30vw;
-  transform: scale(0.3);
-  z-index: 0;
-  mix-blend-mode: lighten;
-`;
-
-
-const Home = () => {
-  return (
-    <HomePage>
-      {/* <HomeIntroSeq>
-        <HomeIntroImage
-          ref="imageRefOne"
-          src={HomeIntroImg}
-          alt="Chromatica text graphic"
-        />
-      </HomeIntroSeq>
-      <HomeImage>
-        <HomeImageWide
-          ref="imageRefTwo"
-          src="https://cache.umusic.com/_sites/_halo/artistlg/images/LG-Wide.jpg"
-          alt="The album artist in a far away planet"
-        />
-      </HomeImage> */}
-
-      <HomePageHeader>
-        ENTER{" "}
-        <HomeLink
-          href="https://ladygaga.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LADYGAGA.COM
-        </HomeLink>
-      </HomePageHeader>
-
-      {/* <HomeImageOverlay>
-        <img
-          className="out-now"
-          src="https://cache.umusic.com/_sites/_halo/artistlg/images/outnow.png"
-          alt="Chromatica - out now!"
-        />
-      </HomeImageOverlay> */}
-
-      <Fade right delay="100">
-        <TrackList
-          src="https://cache.umusic.com/_sites/_halo/artistlg/images/TRACKLIST.png"
-          alt="Chromatica tracklist"
-        />
-      </Fade>
-    </HomePage>
-  );
+const title = {
+  initial: { y: -20, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
+  exit: {
+    y: 20,
+    opacity: 0,
+    transition: {
+      duration: 0.7,
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
 };
 
-export default Home;
+const gagaWideAnim = {
+  initial: { y: -20, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 3,
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
+};
+
+export default function HomePage({ isFirstMount }) {
+  return (
+    <Layout>
+      <motion.section exit={{ opacity: 0 }}>
+        {isFirstMount && <InitialTransition />}
+
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={content(isFirstMount)}
+          className="space-y-12"
+        >
+          <motion.h1
+            variants={title}
+            className="text-6xl font-black text-center"
+          >
+            <img src={LGTextGraphic} alt="Chromatica text graphic" />
+          </motion.h1>
+
+          <motion.section
+            variants={gagaWideAnim}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-gray-700 body-font"
+          >
+            <div className="container px-5 pt-12 mx-auto">
+              <div className="flex flex-wrap -m-4">
+                <img
+                  src={LGWide}
+                  alt="gaga on a faraway planet"
+                  style={{ position: "fixed", left: 0, top: 0 }}
+                />
+              </div>
+            </div>
+          </motion.section>
+        </motion.div>
+      </motion.section>
+    </Layout>
+  );
+}
+
+const blackBox = {
+  initial: {
+    height: "100%",
+    bottom: 0,
+  },
+  animate: {
+    height: 0,
+    transition: {
+      when: "afterChildren",
+      duration: 1.5,
+      ease: [0.87, 0, 0.13, 1],
+    },
+  },
+};
+
+const textContainer = {
+  initial: {
+    opacity: 1,
+  },
+  animate: {
+    opacity: 0,
+    transition: {
+      duration: 0.3,
+      when: "afterChildren",
+    },
+  },
+};
+
+const text = {
+  initial: {
+    y: 40,
+  },
+  animate: {
+    y: 80,
+    transition: {
+      duration: 1.5,
+      ease: [0.87, 0, 0.13, 1],
+    },
+  },
+};
+
+const InitialTransition = () => {
+  // Scroll user to top to avoid showing the footer
+  React.useState(() => {
+    typeof windows !== "undefined" && window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <motion.div
+      className="absolute z-50 flex items-center justify-center w-full bg-black"
+      initial="initial"
+      animate="animate"
+      variants={blackBox}
+      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
+      onAnimationComplete={() =>
+        document.body.classList.remove("overflow-hidden")
+      }
+    >
+      <motion.svg variants={textContainer} className="absolute z-50 flex">
+        <pattern
+          id="pattern"
+          patternUnits="userSpaceOnUse"
+          width={750}
+          height={800}
+          className="text-white"
+        >
+          <rect className="w-full h-full fill-current" />
+          <motion.rect
+            variants={text}
+            className="w-full h-full text-gray-600 fill-current"
+          />
+        </pattern>
+        <text
+          className="text-4xl font-bold"
+          textAnchor="middle"
+          x="50%"
+          y="50%"
+          style={{ fill: "url(#pattern)" }}
+        ></text>
+      </motion.svg>
+    </motion.div>
+  );
+};

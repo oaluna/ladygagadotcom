@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 import { useSpring, config } from "react-spring";
-import Nav from "../NavBar/NavBar"
-import {HeroImage, WideImage} from "./hero-img";
-import image from "../../images/LGTextGraphic.jpg"
-import imageWide from "../../images/LG-Wide.jpg"
+import Nav from "../NavBar/NavBar";
+import HeroImage  from "./hero-img";
+import image from "../../images/LGTextGraphic.jpg";
+import imageWide from "../../images/LG-Wide.jpg";
 import Light from "./light";
 
 const INIT = "INIT";
@@ -26,7 +26,7 @@ function getInitState(state) {
 function getTransitionState(state) {
   switch (state) {
     case INIT:
-      return { borderRadius: "50%", width: "350px", height: "350px" };
+      return { width: "100vw", height: "auto" };
     case TRANSITION:
       return {
         borderRadius: "0%",
@@ -55,11 +55,10 @@ function getFinalState(state) {
   }
 }
 
- function HomeAnimation() {
+function HomeAnimation() {
   const [heroAnim, setHeroAnim] = useState(INIT);
   const [lightAnim, setLightAnim] = useState(INIT);
   const [navAnim, setNavAnim] = useState(INIT);
-     const [wideAnim, setWideAnim] = useState(INIT);
 
   const imageProps = useSpring({
     ...getInitState(heroAnim),
@@ -69,55 +68,46 @@ function getFinalState(state) {
     ...getTransitionState(lightAnim),
     config: config.gentle,
   });
-     const navProps = useSpring({
-         ...getFinalState(navAnim),
-         config: config.gentle
-     });
-     const wideProps = useSpring({
-         ...getFinalState(wideAnim),
-         config: config.gentle
-     })
-  
-  useEffect(() => {
-    function handleScroll(e) {
-      const percentPosY = Math.floor(
-        (window.pageYOffset / window.innerHeight) * 100
-      );
-      if (percentPosY <= 10) {
-        setHeroAnim(INIT);
-          setLightAnim(INIT);
-          setWideAnim(INIT);
-        
-      } else if (percentPosY > 10 && percentPosY < 25) {
-        setHeroAnim(TRANSITION);
-          setLightAnim(TRANSITION);
-    setWideAnim(TRANSITION)
-    
-      } else if (percentPosY >= 30) {
-        setHeroAnim(FINAL);
-          setNavAnim(FINAL);
-          setWideAnim(FINAL);
-      }
-    }
+  const navProps = useSpring({
+    ...getFinalState(navAnim),
+    config: config.gentle,
+  });
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    useEffect(() => {
+      function handleScroll(e) {
+        const percentPosY = Math.floor(
+          (window.pageYOffset / window.innerHeight) * 100
+        );
+        if (percentPosY <= 10) {
+          setHeroAnim(INIT);
+          setLightAnim(INIT);
+          setNavAnim(INIT);
+        } else if (percentPosY > 10 && percentPosY < 25) {
+          setHeroAnim(TRANSITION);
+          setLightAnim(TRANSITION);
+          setNavAnim(TRANSITION);
+        } else if (percentPosY >= 30) {
+          setHeroAnim(FINAL);
+        }
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
   return (
     <div
       css={`
         width: 100%;
         height: 300vh;
-        background-color: black;
-        background-image: ${imageWide}
+
+        background-image: url(${imageWide});
       `}
     >
       <Nav style={navProps} />
-          {INIT && <HeroImage src={image} style={imageProps} />}
-          {FINAL && <WideImage src={imageWide} style={wideProps} />}
+      <HeroImage src={image} style={imageProps} />
       <Light style={lightProps} />
     </div>
   );
 }
-export default HomeAnimation
+export default HomeAnimation;
