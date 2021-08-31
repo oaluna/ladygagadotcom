@@ -11,7 +11,7 @@ const MusicPage = () => {
       <img
         src={LGCover}
         alt="Gaga on a round contraption"
-        style={{ left: "20vw", width: "100vw", verticalAlign: "middle" }}
+        style={{ left: "20vw", width: "100vw", height: "auto", verticalAlign: "middle", scrollBehavior: "none" }}
       />
     </>
   );

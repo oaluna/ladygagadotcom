@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
 
-
-
 export const AnimatedHeroImage = styled(animated.img)`
   width: 250px;
   display: block;

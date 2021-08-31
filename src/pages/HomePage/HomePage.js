@@ -4,6 +4,7 @@ import Layout from "../../components/Layout/Layout";
 import { motion } from "framer-motion";
 import LGWide from "../../images/LG-Wide.jpg";
 import LGTextGraphic from "../../images/LGTextGraphic.jpg";
+import outNow from "../../images/outnow.png";
 
 const content = (isFirstMount) => ({
   animate: {
@@ -43,6 +44,18 @@ const gagaWideAnim = {
   },
 };
 
+const outNowAnim = {
+  initial: {  opacity: 0 },
+  animate: {
+    opacity: 0.75,
+    mixBlendMode: "color-dodge",
+    transition: {
+      duration: 5,
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
+};
+
 export default function HomePage({ isFirstMount }) {
   return (
     <Layout>
@@ -69,13 +82,30 @@ export default function HomePage({ isFirstMount }) {
             className="text-gray-700 body-font"
           >
             <div className="container px-5 pt-12 mx-auto">
-              <div className="flex flex-wrap -m-4">
+              <div className="flex flex-wrap m-4">
                 <img
                   src={LGWide}
                   alt="gaga on a faraway planet"
                   style={{ position: "fixed", left: 0, top: 0 }}
                 />
               </div>
+            </div>
+          </motion.section>
+          <motion.section variants={outNowAnim} className="out-now">
+            <div className="flex flex-wrap m-3 absolute">
+              <img
+                src={outNow}
+                alt="text graphic"
+               
+                style={{
+                  zIndex: 2,
+                  position: "absolute",
+                  top: 300,
+                  left: 550,
+                  transform: "scale(2)",
+                  mixBlendMode: "color-dodge",
+                }}
+              />
             </div>
           </motion.section>
         </motion.div>

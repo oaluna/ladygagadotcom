@@ -102,11 +102,10 @@ const Footer = () => (
             <ul className="menu">
               <li className="first leaf menu-mlid-720">
                 <a
-                  href="https://www.interscope.com"
-                  target="_blank"
+                  href="https://oscarluna.dev"
                   rel="noreferrer"
                 >
-                  © 2021 Interscope Records
+              A Project By Oscar Armando Luna - I do not own any of the media featured on this website.
                 </a>
               </li>
               <li className="leaf menu-mlid-3556">
