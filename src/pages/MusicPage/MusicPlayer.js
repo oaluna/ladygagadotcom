@@ -1,25 +1,40 @@
 const MusicPlayer = () => {
   return (
-    <div>
-      <iframe
-        title="ChromaticaPlayer"
-        src="https://open.spotify.com/embed/album/05c49JgPmL4Uz2ZeqRx5SP"
-        width="40%"
-        height="540"
-        frameBorder="0"
-        allowtransparency="true"
-        allow="encrypted-media"
+    <>
+      <div
+        className="playerContainer"
         style={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
-          marginTop: "15vh",
-          marginLeft: "5vw",
-          marginRight: "auto",
-          position: "absolute"
+          justifyContent: "space-evenly",
+          zIndex: 2,
+          position: "relative"
         }}
-      ></iframe>
-    </div>
+      >
+        <div className="chromaticaPlayer">
+          <iframe
+            title="ChromaticaPlayer"
+            src="https://open.spotify.com/embed/album/05c49JgPmL4Uz2ZeqRx5SP"
+            width="500px"
+            height="600px"
+            frameBorder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+        </div>
+        <div className="dawnOfChromaticaPlayer">
+          <iframe
+            title="DawnOfChromaticaPlayer"
+            src="https://open.spotify.com/embed/album/3OevODyllQCrhudfLLnV3y"
+            width="500px"
+            height="600px"
+            frameBorder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+        </div>
+      </div>
+    </>
   );
 };
 

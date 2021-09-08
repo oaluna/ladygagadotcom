@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import LGWide from "../../images/LG-Wide.jpg";
 import LGTextGraphic from "../../images/LGTextGraphic.jpg";
 import TrackList from "../../images/TRACKLIST.png";
-import LGRemix from "../../images/LG-Remix.jpg"
+import LGRemix from "../../images/LG-Remix.jpg";
 import outNow from "../../images/outnow.png";
 
 const content = (isFirstMount) => ({
@@ -60,7 +60,7 @@ const outNowAnim = {
 const TrackListImage = styled.div`
   margin-left: 50vw;
   margin-top: 100vh;
-`
+`;
 export default function HomePage({ isFirstMount }) {
   return (
     <Layout>
@@ -113,10 +113,39 @@ export default function HomePage({ isFirstMount }) {
             </div>
           </motion.section>
         </motion.div>
-        <div className="tracklistImage">
-          <img src={TrackList} alt='Track list' style={{position: "absolute", left: "-20vw", top: "70vh", transform: "scale(0.45)"}}/>
-          <img src={LGRemix} alt="remix album cover" style={{position: "absolute", left: "35vw", top: "70vh", transform: "scale(0.45)"}}/>
-        </div>
+        <TrackListImage>
+          <img
+            src={TrackList}
+            alt="Track list"
+            style={{
+              position: "absolute",
+              left: "-20vw",
+              top: "70vh",
+              transform: "scale(0.45)",
+            }}
+          />
+          <img
+            src={LGRemix}
+            alt="remix album cover"
+            style={{
+              position: "absolute",
+              left: "35vw",
+              top: "70vh",
+              transform: "scale(0.45)",
+            }}
+          />
+          <label
+            htmlFor={LGRemix}
+            style={{
+              fontSize: "24px",
+              position: "relative",
+              color: "#f16e70",
+              marginTop: "-12vh",
+            }}
+          >
+            DAWN OF CHROMATICA AVAILABLE NOW
+          </label>
+        </TrackListImage>
       </motion.section>
     </Layout>
   );

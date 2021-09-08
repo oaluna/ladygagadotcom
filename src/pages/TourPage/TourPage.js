@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import LGOne from "../../images/LG-01.jpg";
+import LGTwo from "../../images/LG-02.jpg";
 import Layout from "../../components/Layout/Layout";
 
 const content = {
@@ -53,7 +53,7 @@ const TourPage = () => {
             <h1 className="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font">
               ON TOUR
             </h1>
-                      <img src={LGOne} alt="Gaga floating" style={{position: "fixed",left: 0, top: 0,width: "100vw", zIndex: 0}}/>
+                      <img src={LGTwo} alt="Gaga floating" style={{position: "fixed",left: 0, top: "-20vh",width: "100vw", zIndex: 0}}/>
             
           </motion.div>
          
