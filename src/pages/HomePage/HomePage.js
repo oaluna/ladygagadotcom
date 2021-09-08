@@ -1,9 +1,11 @@
 import React from "react";
-
+import styled from "styled-components";
 import Layout from "../../components/Layout/Layout";
 import { motion } from "framer-motion";
 import LGWide from "../../images/LG-Wide.jpg";
 import LGTextGraphic from "../../images/LGTextGraphic.jpg";
+import TrackList from "../../images/TRACKLIST.png";
+import LGRemix from "../../images/LG-Remix.jpg"
 import outNow from "../../images/outnow.png";
 
 const content = (isFirstMount) => ({
@@ -45,9 +47,9 @@ const gagaWideAnim = {
 };
 
 const outNowAnim = {
-  initial: {  opacity: 0 },
+  initial: { opacity: 0 },
   animate: {
-    opacity: 0.75,
+    opacity: 0.55,
     mixBlendMode: "color-dodge",
     transition: {
       duration: 5,
@@ -55,7 +57,10 @@ const outNowAnim = {
     },
   },
 };
-
+const TrackListImage = styled.div`
+  margin-left: 50vw;
+  margin-top: 100vh;
+`
 export default function HomePage({ isFirstMount }) {
   return (
     <Layout>
@@ -96,7 +101,6 @@ export default function HomePage({ isFirstMount }) {
               <img
                 src={outNow}
                 alt="text graphic"
-               
                 style={{
                   zIndex: 2,
                   position: "absolute",
@@ -109,6 +113,10 @@ export default function HomePage({ isFirstMount }) {
             </div>
           </motion.section>
         </motion.div>
+        <div className="tracklistImage">
+          <img src={TrackList} alt='Track list' style={{position: "absolute", left: "-20vw", top: "70vh", transform: "scale(0.45)"}}/>
+          <img src={LGRemix} alt="remix album cover" style={{position: "absolute", left: "35vw", top: "70vh", transform: "scale(0.45)"}}/>
+        </div>
       </motion.section>
     </Layout>
   );
