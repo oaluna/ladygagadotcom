@@ -46,17 +46,33 @@ const TourPage = () => {
           initial="initial"
           className="container px-5 py-24 mx-auto"
         >
-          <motion.div
-            variants={title}
-            className="flex w-100 text-center"
-          >
-            <h1 className="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font">
+          <motion.div variants={title} className="flex w-100 text-center">
+            <h1
+            
+              style={{
+                marginTop: "10vh",
+                width: "100%",
+                fontFamily: "Lydian Csv BT, FolioBT, sans-serif",
+                zIndex: 3,
+                position: "absolute",
+                textAlign: "center",
+                letterSpacing: "-2px",
+              }}
+            >
               ON TOUR
             </h1>
-                      <img src={LGTwo} alt="Gaga floating" style={{position: "fixed",left: 0, top: "-20vh",width: "100vw", zIndex: 0}}/>
-            
+            <img
+              src={LGTwo}
+              alt="Gaga floating"
+              style={{
+                position: "fixed",
+                left: 0,
+                top: "-20vh",
+                width: "100vw",
+                zIndex: 0,
+              }}
+            />
           </motion.div>
-         
         </motion.div>
       </motion.section>
     </Layout>

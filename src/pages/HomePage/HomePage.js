@@ -57,10 +57,7 @@ const outNowAnim = {
     },
   },
 };
-const TrackListImage = styled.div`
-  margin-left: 50vw;
-  margin-top: 100vh;
-`;
+
 export default function HomePage({ isFirstMount }) {
   return (
     <Layout>
@@ -140,10 +137,10 @@ export default function HomePage({ isFirstMount }) {
               fontSize: "24px",
               position: "relative",
               color: "#f16e70",
-              marginTop: "-12vh",
+              marginTop: "-15vh",
             }}
           >
-            DAWN OF CHROMATICA AVAILABLE NOW
+            <em>DAWN OF CHROMATICA</em> AVAILABLE NOW
           </label>
         </TrackListImage>
       </motion.section>
@@ -234,3 +231,8 @@ const InitialTransition = () => {
     </motion.div>
   );
 };
+
+const TrackListImage = styled.div`
+  margin-left: 50vw;
+  margin-top: 100vh;
+`;

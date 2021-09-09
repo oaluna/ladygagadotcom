@@ -3,11 +3,23 @@ a {
   letter-spacing: 0.6;
   color: #f16e70;
 }
-h1, h2, h3, h4, h5, h6, p {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #f16e70;
   letter-spacing: .8px;
   margin: 15px;
   padding: 25px;
+}
+
+p {
+  font-family: Lydian Csv BT,
+    Folio BT,
+    sans-serif;
 }
 
 .App {
@@ -15,7 +27,7 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
   margin: 0;
   padding: 0;
-  font-family: 'FolioBT-Book', 'HelveticaNeue-Light',"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-family: 'FolioBT-Book', 'HelveticaNeue-Light', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 }
 
