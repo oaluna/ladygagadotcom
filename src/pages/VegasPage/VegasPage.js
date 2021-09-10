@@ -51,16 +51,30 @@ class VegasPage extends React.Component {
             height: "400px",
             display: "flex",
             flexDirection: "column",
-            margin: "15px"
+            margin: "15px",
+            borderRadius: "10px",
           }}
         >
-          <div className="card-title" style={{ position: "relative" }}>
+          <div
+            className="card-title"
+            style={{ position: "relative", letterSpacing: "-5px" }}
+          >
             {" "}
             <h1>{show.date}</h1>
           </div>
-          <div className="card-content" style={{ position: "relative" }}>
+          <div
+            className="card-content"
+            style={{
+              fontSize: "56px",
+              color: "limegreen",
+              position: "relative",
+              letterSpacing: "-3px",
+              textDecoration: "none"
+            }}
+          >
             <p>{show.venue}</p>
           </div>
+          <p style={{color: "red", fontWeight: 900}}>POSTPONED UNTIL 2022</p>
         </div>
       );
     });
@@ -91,7 +105,7 @@ class VegasPage extends React.Component {
               />
               <h1
                 style={{
-                  marginTop: "10vh",
+                  marginTop: "15vh",
                   width: "100%",
                   fontFamily: "Lydian Csv BT, FolioBT, sans-serif",
                   zIndex: 2,
@@ -110,10 +124,10 @@ class VegasPage extends React.Component {
                   display: "flex",
                   flexDirection: "row",
                   flexWrap: "wrap",
-                    alignItems: "center",
-                  margin:"0 auto",
-                    justifyContent: "space-evenly",
-                  width: "80vw"
+                  alignItems: "center",
+                  margin: "0 auto",
+                  justifyContent: "space-evenly",
+                  width: "80vw",
                 }}
               >
                 {vegasCards}

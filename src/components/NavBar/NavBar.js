@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { AnimatedNav } from "../HomeAnimation/lib";
 
 const NavBar = styled.nav`
-  position: absolute;
+  position: fixed;
   top: 0vh;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  z-index: 250;
+  z-index: 2500;
 `;
 const NavLink = styled(Link)`
   color: #f16e70;
