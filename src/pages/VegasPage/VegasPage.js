@@ -53,6 +53,7 @@ class VegasPage extends React.Component {
             flexDirection: "column",
             margin: "15px",
             borderRadius: "10px",
+            boxShadow: "0px 1.5px 6px #222"
           }}
         >
           <div
@@ -69,7 +70,8 @@ class VegasPage extends React.Component {
               color: "limegreen",
               position: "relative",
               letterSpacing: "-3px",
-              textDecoration: "none"
+              textDecoration: "none",
+              zIndex: 100
             }}
           >
             <p>{show.venue}</p>

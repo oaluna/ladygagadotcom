@@ -35,10 +35,11 @@ const title = {
 };
 
 const gagaWideAnim = {
-  initial: { y: -20, opacity: 0 },
+  initial: { y: -20, opacity: 0,  },
   animate: {
     y: 0,
     opacity: 1,
+    
     transition: {
       duration: 3,
       ease: [0.6, -0.05, 0.01, 0.99],
@@ -58,6 +59,14 @@ const outNowAnim = {
   },
 };
 
+const panOutAnim = {
+  initial: { width: "100%", height: "100%" },
+  animate: {
+    transform: "scale(0.3)",
+    duration: 5,
+    ease: [0.6, -0.05, 0.01, 0.99],
+  },
+};
 export default function HomePage({ isFirstMount }) {
   return (
     <Layout>
@@ -72,7 +81,7 @@ export default function HomePage({ isFirstMount }) {
         >
           <motion.h1
             variants={title}
-            className="text-6xl font-black text-center"
+            className="text-6xl font-black text-center mt-5"
           >
             <img src={LGTextGraphic} alt="Chromatica text graphic" />
           </motion.h1>
@@ -82,6 +91,7 @@ export default function HomePage({ isFirstMount }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-gray-700 body-font"
+            style={{ transform: "rotateY(180deg) !important" }}
           >
             <div className="container px-5 pt-12 mx-auto">
               <div className="flex flex-wrap m-4">
@@ -109,7 +119,21 @@ export default function HomePage({ isFirstMount }) {
               />
             </div>
           </motion.section>
+          
         </motion.div>
+        {outNowAnim && (
+          <motion.div variants={panOutAnim} className="pan-out">
+            <div
+              className="background"
+              style={{
+                background: "rgba(0, 0, 0, 0.5)",
+                width: "100vw",
+                height: "100vh",
+                position: "absolute",
+              }}
+            ></div>
+          </motion.div>
+        )}
         <TrackListImage>
           <img
             src={TrackList}
@@ -236,3 +260,4 @@ const TrackListImage = styled.div`
   margin-left: 50vw;
   margin-top: 100vh;
 `;
+

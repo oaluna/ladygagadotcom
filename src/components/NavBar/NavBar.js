@@ -9,7 +9,7 @@ const NavBar = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  z-index: 2500;
+  z-index: 25000;
 `;
 const NavLink = styled(Link)`
   color: #f16e70;

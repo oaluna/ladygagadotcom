@@ -127,7 +127,7 @@ const SignUp = () => (
             </label>
           </form>
           <hr className="divider" />
-          <div className="content footer">
+          <div className="content-footer">
             <p>For demonstrative purposes only</p>
           </div>
         </div>
