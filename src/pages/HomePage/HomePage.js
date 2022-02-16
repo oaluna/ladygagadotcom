@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Layout from "../../components/Layout/Layout";
 import { motion } from "framer-motion";
+import { useParallax } from "react-scroll-parallax";
 import LGWide from "../../images/LG-Wide.jpg";
 import LGTextGraphic from "../../images/LGTextGraphic.jpg";
 import TrackList from "../../images/TRACKLIST.png";
@@ -35,11 +36,11 @@ const title = {
 };
 
 const gagaWideAnim = {
-  initial: { y: -20, opacity: 0,  },
+  initial: { y: -20, opacity: 0 },
   animate: {
     y: 0,
     opacity: 1,
-    
+
     transition: {
       duration: 3,
       ease: [0.6, -0.05, 0.01, 0.99],
@@ -68,6 +69,10 @@ const panOutAnim = {
   },
 };
 export default function HomePage({ isFirstMount }) {
+
+  const parallax = useParallax({
+    speed: 10,
+  });
   return (
     <Layout>
       <motion.section exit={{ opacity: 0 }}>
@@ -95,10 +100,11 @@ export default function HomePage({ isFirstMount }) {
           >
             <div className="container px-5 pt-12 mx-auto">
               <div className="flex flex-wrap m-4">
-                <img
+                 <img
+                 ref={parallax.ref}
                   src={LGWide}
                   alt="gaga on a faraway planet"
-                  style={{ position: "fixed", left: 0, top: 0 }}
+                  style={{ position: "fixed", left: 0, top: "-20px", transform: "scale(1.2)" }}
                 />
               </div>
             </div>
@@ -119,7 +125,6 @@ export default function HomePage({ isFirstMount }) {
               />
             </div>
           </motion.section>
-          
         </motion.div>
         {outNowAnim && (
           <motion.div variants={panOutAnim} className="pan-out">
@@ -260,4 +265,3 @@ const TrackListImage = styled.div`
   margin-left: 50vw;
   margin-top: 100vh;
 `;
-

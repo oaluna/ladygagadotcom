@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# LADY GAGA TRIBUTE PAGE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A restyling of the [Lady Gaga artist page](https://ladygaga.com).Users can listen to her latest album as well as the remix album through an embedded [Spotify](https://spoiify.com) player.
 
 ## Available Scripts
 
