@@ -1,13 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+
 import Layout from "../../components/Layout/Layout";
+
 import { motion } from "framer-motion";
 import { useParallax } from "react-scroll-parallax";
+
 import LGWide from "../../images/LG-Wide.jpg";
 import LGTextGraphic from "../../images/LGTextGraphic.jpg";
 import TrackList from "../../images/TRACKLIST.png";
 import LGRemix from "../../images/LG-Remix.jpg";
 import outNow from "../../images/outnow.png";
+import LoveForSale from "../../images/loveforsale.jpg";
 
 const content = (isFirstMount) => ({
   animate: {
@@ -69,7 +73,6 @@ const panOutAnim = {
   },
 };
 export default function HomePage({ isFirstMount }) {
-
   const parallax = useParallax({
     speed: 10,
   });
@@ -100,11 +103,16 @@ export default function HomePage({ isFirstMount }) {
           >
             <div className="container px-5 pt-12 mx-auto">
               <div className="flex flex-wrap m-4">
-                 <img
-                 ref={parallax.ref}
+                <img
+                  ref={parallax.ref}
                   src={LGWide}
                   alt="gaga on a faraway planet"
-                  style={{ position: "fixed", left: 0, top: "-20px", transform: "scale(1.2)" }}
+                  style={{
+                    position: "fixed",
+                    left: 0,
+                    top: "-20px",
+                    transform: "scale(1.2)",
+                  }}
                 />
               </div>
             </div>
@@ -171,6 +179,58 @@ export default function HomePage({ isFirstMount }) {
           >
             <em>DAWN OF CHROMATICA</em> AVAILABLE NOW
           </label>
+          <div
+            className="footer-promo"
+            style={{
+              width: "70vw",
+              height: "100px",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-evenly",
+              marginTop: "45vh",
+              marginLeft: "0vw",
+            }}
+          >
+            <div className="footer-promo-container">
+              <div className="footer-promo-img">
+                <img
+                  src={LoveForSale}
+                  alt="album-cover"
+                  style={{
+                    transform: "scale(0.25)",
+                    padding: "45px",
+                    position: "relative",
+                  }}
+                />
+                <div
+                  className="footer-promo-cta"
+                  style={{
+                    width: "100%",
+                    fontSize: "24px",
+                    position: "relative",
+                    color: "#f16e70",
+                  }}
+                >
+                  <label
+                    style={{
+                      fontSize: "24px",
+                      display: "flex",
+                      width: "50%",
+                      height: "auto",
+                      flexDirection: "row",
+                      alignItems: "flex-start",
+                      justifyContent: "flex-start",
+                      textAlign: "left",
+                      color: "#f16e70",
+                    }}
+                  >
+                    <em>LOVE FOR SALE</em> AVAILABLE NOW
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
         </TrackListImage>
       </motion.section>
     </Layout>
